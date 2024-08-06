@@ -10,12 +10,15 @@ security:
       secret-key: 53cr37
       expire-length: 3600000
 spring:
+  sql:
+    init:
+      platform: postgres
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test_integracao?useTimezone=true&serverTimezone=UTC
-    username: root
-    password: 12345678
+    url: jdbc:postgresql://localhost:5432/test_integracao
+    username: postgres
+    password: vicente0301
   jpa:
+    database: POSTGRESQL
     hibernate:
       ddl-auto: none
     properties:
