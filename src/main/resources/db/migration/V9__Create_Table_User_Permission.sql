@@ -6,3 +6,12 @@
   CONSTRAINT fk_user_permission FOREIGN KEY (id_user) REFERENCES users (id),
   CONSTRAINT fk_user_permission_permission FOREIGN KEY (id_permission) REFERENCES permission (id)
 ) ENGINE=InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS person (
+   
+    name VARCHAR(100) NOT NULL,
+    age INT,
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES department(id)
+);
